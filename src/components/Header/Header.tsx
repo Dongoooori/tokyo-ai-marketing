@@ -20,9 +20,9 @@ const Header: React.FC = () => {
         isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
       )}
     >
-      <div className="w-full flex justify-between items-center px-4">
+      <div className="w-full flex items-center px-4">
         {/* 왼쪽: 메뉴 */}
-        <button className="text-sm">
+        <button className="text-sm flex justify-start">
           <MenuIcon 
             sx={{
               color: isScrolled ? undefined : "white"
@@ -31,14 +31,14 @@ const Header: React.FC = () => {
         </button>
 
         {/* 가운데: 로고 */}
-        <div className={classNames("text-xl font-bold tracking-wider", isScrolled ? "text-black" : "text-white")}>
+        <div className={classNames("text-xl font-bold tracking-wider flex justify-center w-full", isScrolled ? "text-black" : "text-white")}>
           BRAND UP
         </div>
 
         {/* 오른쪽: 설정 */}
-        <button className={classNames("px-3 py-1 rounded-md text-sm", isScrolled ? "text-black" : "text-white")}>
+        {/* <button className={classNames("px-3 py-1 rounded-md text-sm", isScrolled ? "text-black" : "text-white")}>
           Configure
-        </button>
+        </button> */}
       </div>
     </header>
   )

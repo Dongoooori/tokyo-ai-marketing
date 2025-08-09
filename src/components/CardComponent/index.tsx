@@ -6,11 +6,8 @@ type CardProps = {
   cardDescription: string;
 }
 
-const CardComponent = ({ 
-  image,
-  cardTitle,
-  cardDescription 
-} : CardProps) => {
+const CardComponent = (props: CardProps) => {
+  const { image, cardTitle, cardDescription } = props;
   return (
     <Card sx={{ width: "100%", maxWidth: 338 }}>
       <CardMedia

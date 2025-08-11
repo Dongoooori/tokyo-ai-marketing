@@ -12,7 +12,7 @@ const App: React.FC = () => {
   return (
     <div className="w-full">
       <Header />
-      <section className="w-full aspect-[1/2] sm:aspect-[4/5] lg:aspect-[3/2] overflow-hidden">
+      <section className="w-full h-[100vh] sm:h-screen overflow-hidden">
         <img
           src={HeroImage}
           alt="hero"

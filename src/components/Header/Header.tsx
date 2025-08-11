@@ -1,18 +1,10 @@
 import classNames from "classnames";
-import { useEffect, useState } from "react";
 import MenuIcon from '@mui/icons-material/MenuRounded';
+import useScroll from "../../hooks/useScroll";
 
 const Header: React.FC = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  // 헤더 스크롤 감지
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+  const { completion, isScrolled } = useScroll();
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
   return (
     <header
       className={classNames(
@@ -40,6 +32,12 @@ const Header: React.FC = () => {
           Configure
         </button> */}
       </div>
+      <span 
+          style={{
+            transform: `translateX(${completion - 100}%)`
+          }}
+          className="absolute bg-gray-500 w-full h-1 bottom-0"
+        />
     </header>
   )
 }

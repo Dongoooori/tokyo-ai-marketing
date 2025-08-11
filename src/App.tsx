@@ -5,8 +5,8 @@ import SwiperComponent from './components/Swiper/Swiper';
 import CardComponent from './components/CardComponent';
 import VideoCard from './components/VideoCard';
 import ImageListItem from './components/ImageListComponent';
-import Mark from './assets/mark.jpg';
 import PromotionCard from './components/PromotionCard';
+import Footer from './components/Footer';
 
 const App: React.FC = () => {
   return (
@@ -22,7 +22,7 @@ const App: React.FC = () => {
 
       <main className="space-y-12 relative">
         {/** Title Section */}
-        <section className='w-full font-serif font-semibold text-lg sm:text-2xl text-left sm:text-center pt-10 px-4'>
+        <section className='w-full font-serif font-semibold text-lg sm:text-4xl text-left sm:text-center py-20 px-4'>
           <p>Every brand has a story.</p>
           <p>We help the world hear yours.</p>
         </section>
@@ -34,61 +34,16 @@ const App: React.FC = () => {
           </div>
           <div className='hidden sm:flex justify-center'>
             <div className='grid grid-flow-col grid-rows-3 lg:grid-rows-2 gap-4 max-w-screen-xl'>
-              <CardComponent 
-                image={Mark}
-                cardTitle='cardTitle'
-                cardDescription='cardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescription'  
-              />
-              <CardComponent 
-                image={Mark}
-                cardTitle='cardTitle'
-                cardDescription='cardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescription'  
-              />
-              <CardComponent 
-                image={Mark}
-                cardTitle='cardTitle'
-                cardDescription='cardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescription'  
-              />
-              <CardComponent 
-                image={Mark}
-                cardTitle='cardTitle'
-                cardDescription='cardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescription'  
-              />
-              <CardComponent 
-                image={Mark}
-                cardTitle='cardTitle'
-                cardDescription='cardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescription'  
-              />
-              <CardComponent 
-                image={Mark}
-                cardTitle='cardTitle'
-                cardDescription='cardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescription'  
-              />
+              <CardComponent />
             </div>
           </div>
         </section>
 
         {/** Video Section */}
-        <section className='mx-auto px-4 md:px-10'>
-          <div className='w-full flex flex-col md:grid md:grid-flow-col md:grid-rows-3 gap-4'>
-            <VideoCard 
-              src='/video/123.mp4'
-            />
-            <VideoCard 
-              src='/video/123.mp4'
-            />
-            <VideoCard 
-              src='/video/123.mp4'
-            />
-            <VideoCard 
-              src='/video/123.mp4'
-            />
-            <VideoCard 
-              src='/video/123.mp4'
-            />
-            <VideoCard 
-              src='/video/123.mp4'
-            />
+        <section className='mx-auto py-20 px-4 md:px-10 space-y-10'>
+          <p className='font-serif font-bold text-lg sm:text-4xl sm:text-center'>Innovation You Can See</p>
+          <div className='w-full flex flex-col md:grid md:grid-flow-col md:grid-rows-3 gap-10 pt-20'>
+            <VideoCard />
           </div>
         </section>
 
@@ -96,10 +51,22 @@ const App: React.FC = () => {
         <section className='mx-auto px-4 md:px-10 py-20 bg-black'>
 
           {/** text Section */}
-          <span className='font-serif font-semibold text-lg sm:text-2xl text-center text-white'>
-            <p>Where quality meets passion.</p>
-            <p>Your story, our brand.</p>
-          </span>
+          <div className='font-serif text-center text-white space-y-10 max-w-screen-md mx-auto'>
+            <span className='block font-semibold text-2xl sm:text-6xl'>
+              <p>Designed to get better</p>
+              <p>with time</p>
+            </span>
+            <span className='block text-sm sm:text-xl'>
+              <p>
+                Designed to get better with time, our product evolves alongside you — adapting to your needs, enhancing its performance, and delivering greater value the more you use it. Experience craftsmanship that matures gracefully, ensuring not just reliability today, but exceptional quality for years to come.
+              </p>
+            </span>
+            <button
+              className='bg-white text-black px-8 py-4 rounded-full'
+            >
+              Explore More
+            </button>
+          </div>
 
           {/** Image Section */}
           <div className='pt-12'>
@@ -109,14 +76,12 @@ const App: React.FC = () => {
         </section>
 
         {/**  */}
-        <section className='flex flex-col lg:flex-row gap-8 lg:gap-8 px-4 md:px-10'>
+        <section className='flex flex-col lg:flex-row gap-4 px-4 md:px-10'>
           <PromotionCard />
         </section>
       </main>
 
-      <footer className="mt-20 py-8 text-center text-gray-500">
-        footer
-      </footer>
+      <Footer />
     </div>
   );
 };

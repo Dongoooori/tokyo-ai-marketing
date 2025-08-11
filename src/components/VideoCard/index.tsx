@@ -1,34 +1,42 @@
 import { useRef } from "react";
+import { videoList } from "../../constant/videoList";
 
-type VideoCardProps = {
-  src: string;
-};
+const VideoCard = () => {
+  // 고유의 ref를 사용하여 각 비디오에 대한 참조를 저장
+  const videoRefs = useRef<HTMLVideoElement[]>([]);
 
-const VideoCard = ({ src }: VideoCardProps) => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  const handleMouseEnter = () => {
-    videoRef.current?.play();
+  // 마우스 올리면 비디오 재생
+  const handleMouseEnter = (index: number) => {
+    videoRefs.current[index].play();
   };
 
-  const handleMouseLeave = () => {
-    videoRef.current?.pause();
-    videoRef.current!.currentTime = 0;
+  // 마우스 떼면 비디오 정지
+  const handleMouseLeave = (index: number) => {
+    videoRefs.current[index].pause();
+    videoRefs.current[index].currentTime = 0;
   };
 
   return (
-    <video
-      ref={videoRef}
-      style={{ width: "100%", height: "100%" }}
-      muted
-      loop
-      playsInline
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      <source src={src} type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
+    <>
+      {videoList.map((item, index) => (
+        <video
+          key={index}
+          ref={(el) => {
+            if(el) {
+              videoRefs.current[index] = el;
+            }
+          }}
+          style={{ width: "100%", height: "100%", cursor: "pointer" }}
+          muted
+          loop
+          playsInline
+          onMouseEnter={() => handleMouseEnter(index)}
+          onMouseLeave={() => handleMouseLeave(index)}
+        >
+          <source src={item.src} type="video/mp4" />
+        </video>
+      ))}
+    </>
   );
 };
 

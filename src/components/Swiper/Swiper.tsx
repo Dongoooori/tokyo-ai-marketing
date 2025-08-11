@@ -7,13 +7,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import './index.css';
-import slide_image_audi from "../../assets/Audi.jpg";
-import slide_image_facebook from "../../assets/facebook.jpg";
-import slide_image_netflix from "../../assets/netflix.jpg";
-import slide_image_spotify from "../../assets/spotify.jpg";
-import slide_image_starbucks from "../../assets/starbucks.jpg";
-import slide_image_youtube from "../../assets/youtube.jpg";
-import slide_image_cocacola from "../../assets/cocacola.jpg";
+import { carouselList } from "../../constant/carouselList";
 
 const SwiperComponent = () => {
   return (
@@ -36,27 +30,11 @@ const SwiperComponent = () => {
         modules={[EffectCoverflow, Pagination, Navigation]}
         className="swiper_container"
       >
-        <SwiperSlide>
-          <img src={slide_image_audi} alt=""/>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_cocacola} alt=""/>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_facebook} alt=""/>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_youtube} alt=""/>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_starbucks} alt=""/>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_spotify} alt=""/>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_netflix} alt=""/>
-        </SwiperSlide>
+        {carouselList.map((item, index) => (
+          <SwiperSlide key={index}>
+            <img src={item.src} alt={item.alt} />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   )

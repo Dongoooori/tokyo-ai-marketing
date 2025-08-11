@@ -1,12 +1,20 @@
-import { PromotionCardData } from "../../constant/PromotionCard";
+import { PromotionCardData } from "../../constant/promotionCard";
 
 const PromotionCard = () => {
   return (
     <>
     {PromotionCardData.map((item) => (
-      <div className="relative size-full">
+      <div 
+        style={{
+          overflow: "hidden"
+        }}
+        className="relative size-full rounded-3xl"
+      >
+        <div 
+          className="relative size-full hover:transition-all hover:duration-[400ms] hover:ease-in-out hover:scale-105"
+        >
         <img 
-          className="absolute object-cover inset-0 size-full rounded-3xl opacity-95" 
+          className="absolute object-cover inset-0 size-full rounded-3xl" 
           src={item.src} 
           alt=""
         />
@@ -14,8 +22,8 @@ const PromotionCard = () => {
           <div className="w-full sm:w-[70%] space-y-4 sm:space-y-6 lg:h-[270px]">
             <p className="text-sm">{item.subTitle}</p>
             <p className="text-xl sm:text-2xl lg:text-4xl font-bold">{item.title}</p>
-            <button 
-              className="border border-1 rounded-md py-2 px-6"
+            <button  
+              className="border border-1 rounded-md py-2 px-6 cursor-pointer hover:bg-white hover:transition-all hover:duration-300 hover:ease-in-out hover:text-black"
             >
                 {item.buttonText}
             </button>
@@ -28,6 +36,7 @@ const PromotionCard = () => {
               </a>
             </p>
           </div>
+        </div>
         </div>
       </div>
     ))}

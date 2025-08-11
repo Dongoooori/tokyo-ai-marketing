@@ -13,9 +13,7 @@ const ImageListComponent = () => {
       return chunk;
     });
   };
-
   const groupImage = imageGroup(TopImageList, [1, 3, 3, 1]);
-  console.log(groupImage)
 
   return (
     <>
@@ -38,14 +36,15 @@ const ImageListComponent = () => {
           grid-column: var(--pc-cs) / var(--pc-ce);
         }
         /* PC(sm 이상): layout.pc 적용 */
-        @media (min-width: 640px) {
+        @media (min-width: 768px) {
           .wrap {
             display: grid;
             grid-template-columns: repeat(2, 1fr); /* 그룹 배치 2x2 */
             grid-template-rows: repeat(2, 1fr);
-            gap: 10px;
+            gap: 16px;
           }
           .group {
+            gap: 16px;
             grid-template-columns: repeat(2, 1fr); /* 그룹 내부 2x2 */
           }
           .grid-item {
@@ -61,14 +60,11 @@ const ImageListComponent = () => {
           <div 
             key={groupIndex} 
             className="group" 
-            style={{
-              gap: 10,
-            }}
           >
             {group.map((item, index) => (
               <div
                 key={index}
-                className="grid-item"
+                className="grid-item cursor-pointer hover:scale-105 hover:ease-in-out hover:duration-[400ms]"
                 style={{
                   gridRowStart: item.rowStart,
                   gridRowEnd: item.rowEnd,

@@ -5,6 +5,8 @@ import SwiperComponent from './components/Swiper/Swiper';
 import CardComponent from './components/CardComponent';
 import VideoCard from './components/VideoCard';
 import ImageListItem from './components/ImageListComponent';
+import Mark from './assets/mark.jpg';
+import PromotionCard from './components/PromotionCard';
 
 const App: React.FC = () => {
   return (
@@ -18,7 +20,7 @@ const App: React.FC = () => {
         />
       </section>
 
-      <main className="space-y-12">
+      <main className="space-y-12 relative">
         {/** Title Section */}
         <section className='w-full font-serif font-semibold text-lg sm:text-2xl text-left sm:text-center pt-10 px-4'>
           <p>Every brand has a story.</p>
@@ -33,32 +35,32 @@ const App: React.FC = () => {
           <div className='hidden sm:flex justify-center'>
             <div className='grid grid-flow-col grid-rows-3 lg:grid-rows-2 gap-4 max-w-screen-xl'>
               <CardComponent 
-                image=''
+                image={Mark}
                 cardTitle='cardTitle'
                 cardDescription='cardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescription'  
               />
               <CardComponent 
-                image=''
+                image={Mark}
                 cardTitle='cardTitle'
                 cardDescription='cardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescription'  
               />
               <CardComponent 
-                image=''
+                image={Mark}
                 cardTitle='cardTitle'
                 cardDescription='cardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescription'  
               />
               <CardComponent 
-                image=''
+                image={Mark}
                 cardTitle='cardTitle'
                 cardDescription='cardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescription'  
               />
               <CardComponent 
-                image=''
+                image={Mark}
                 cardTitle='cardTitle'
                 cardDescription='cardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescription'  
               />
               <CardComponent 
-                image=''
+                image={Mark}
                 cardTitle='cardTitle'
                 cardDescription='cardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescriptioncardDescription'  
               />
@@ -91,7 +93,7 @@ const App: React.FC = () => {
         </section>
 
         {/** combined Section */}
-        <section className='mx-auto bg-black px-4 md:px-10 py-10'>
+        <section className='mx-auto px-4 md:px-10 py-20 bg-black'>
 
           {/** text Section */}
           <span className='font-serif font-semibold text-lg sm:text-2xl text-center text-white'>
@@ -104,6 +106,11 @@ const App: React.FC = () => {
             <ImageListItem />
           </div>
 
+        </section>
+
+        {/**  */}
+        <section className='flex flex-col lg:flex-row gap-8 lg:gap-8 px-4 md:px-10'>
+          <PromotionCard />
         </section>
       </main>
 

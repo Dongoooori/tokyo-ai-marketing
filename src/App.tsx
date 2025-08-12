@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './components/Header/Header';
-import HeroImage from './assets/hand.jpg'
+import BackgroundImage1 from './assets/Background1.jpg'
+import BackgroundImage2 from './assets/Background2.jpg'
 import SwiperComponent from './components/Swiper/Swiper';
 import CardComponent from './components/CardComponent';
 import VideoCard from './components/VideoCard';
@@ -14,9 +15,14 @@ const App: React.FC = () => {
       <Header />
       <section className="w-full h-[100vh] sm:h-screen overflow-hidden">
         <img
-          src={HeroImage}
+          src={BackgroundImage1}
           alt="hero"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover hidden sm:block"
+        />
+        <img
+          src={BackgroundImage2}
+          alt="hero"
+          className="w-full h-full object-cover block sm:hidden"
         />
       </section>
 

@@ -9,7 +9,7 @@ import GoogleIcon from "../../assets/Google.jpg";
 const Footer = () => {
   return (
     <footer className='w-full flex flex-col mt-20 py-20 bg-black text-white font-serif'>
-      <div className='w-full flex flex-col md:flex-row gap-10 px-4 md:px-10 justify-center'>
+      <div className='w-full flex flex-col md:flex-row gap-10 px-4 md:px-10'>
         <div className='flex items-start gap-1'>
           <img src='/vite.svg' alt='logo' className='size-6'/>
           <p className='font-bold text-xl'>BRAND UP</p>
@@ -92,7 +92,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className='px-4 md:px-10 mt-20 text-xs flex flex-col md:flex-row justify-center'>
+      <div className='px-4 md:px-10 mt-20 text-xs flex flex-col md:flex-row justify-between'>
         <div className='flex'>
           <ul className='flex gap-4'>
             <li>

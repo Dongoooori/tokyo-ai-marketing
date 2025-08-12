@@ -32,7 +32,7 @@ const App: React.FC = () => {
           <div className='flex sm:hidden'>
             <SwiperComponent />
           </div>
-          <div className='hidden sm:flex justify-center'>
+          <div id='card' className='hidden sm:flex justify-center'>
             <div className='grid grid-flow-col grid-rows-3 lg:grid-rows-2 gap-4 max-w-screen-xl'>
               <CardComponent />
             </div>
@@ -42,13 +42,13 @@ const App: React.FC = () => {
         {/** Video Section */}
         <section className='mx-auto py-20 px-4 md:px-10 space-y-10'>
           <p className='font-serif font-bold text-lg sm:text-4xl sm:text-center'>Innovation You Can See</p>
-          <div className='w-full flex flex-col md:grid md:grid-flow-col md:grid-rows-3 gap-10 pt-20'>
+          <div id='video' className='w-full flex flex-col md:grid md:grid-flow-col md:grid-rows-3 gap-10 pt-20'>
             <VideoCard />
           </div>
         </section>
 
         {/** combined Section */}
-        <section className='mx-auto px-4 md:px-10 py-20 bg-black'>
+        <section id='combined' className='mx-auto px-4 md:px-10 py-20 bg-black'>
 
           {/** text Section */}
           <div className='font-serif text-center text-white space-y-10 max-w-screen-md mx-auto'>
@@ -69,14 +69,14 @@ const App: React.FC = () => {
           </div>
 
           {/** Image Section */}
-          <div className='pt-12'>
+          <div id='image' className='pt-12'>
             <ImageListItem />
           </div>
 
         </section>
 
         {/**  */}
-        <section className='flex flex-col lg:flex-row gap-4 px-4 md:px-10'>
+        <section id='promotion' className='flex flex-col lg:flex-row gap-4 px-4 md:px-10'>
           <PromotionCard />
         </section>
       </main>

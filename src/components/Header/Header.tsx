@@ -1,7 +1,6 @@
 import classNames from "classnames";
 import MenuIcon from '@mui/icons-material/MenuRounded';
 import useScroll from "../../hooks/useScroll";
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import CloseIcon from '@mui/icons-material/CloseRounded';
 
@@ -44,9 +43,11 @@ const Header: React.FC = () => {
         </button>
 
         {/* 가운데: 로고 */}
-        <Link to='/' className={classNames("text-xl font-bold tracking-wider flex justify-center w-full", isScrolled ? "text-black" : "text-white")}>
-          BRAND UP
-        </Link>
+        <div className={classNames("text-xl font-bold tracking-wider flex justify-center w-full", isScrolled ? "text-black" : "text-white")}>
+          <a href="/" className="flex justify-center w-full">
+            BRAND UP
+          </a>
+        </div>
       </div>
       
       {/* Drawer Overlay */}

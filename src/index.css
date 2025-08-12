@@ -27,11 +27,6 @@ html {
   scroll-behavior: smooth;
 }
 
-a {
-}
-a:hover {
-}
-
 body {
   margin: 0;
 }
@@ -41,12 +36,6 @@ h1 {
   line-height: 1.1;
 }
 
-button {
-
-}
-button:hover {
-
-}
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -56,11 +45,5 @@ button:focus-visible {
   :root {
     color: #213547;
     background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    /* background-color: #ffffff; */
   }
 }

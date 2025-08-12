@@ -1,4 +1,3 @@
-import React from 'react'
 import FacebookIcon from "../../assets/Facebook.jpg";
 import InstagramIcon from "../../assets/Instagram.jpg";
 import TwitterIcon from "../../assets/Twitter.jpg";

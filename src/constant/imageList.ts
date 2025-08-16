@@ -1,11 +1,11 @@
 import ImageList1 from "../assets/ImageList11.jpg";
-import ImageList2 from "../assets/Imagelist2.jpg";
+import ImageList2 from "../assets/ImageList2.jpg";
 import ImageList3 from "../assets/ImageList33.jpg";
-import ImageList4 from "../assets/Imagelist4.jpg";
-import ImageList5 from "../assets/Imagelist5.jpg";
-import ImageList6 from "../assets/Imagelist6.jpg";
-import ImageList7 from "../assets/Imagelist7.jpg";
-import ImageList8 from "../assets/Imagelist8.jpg";
+import ImageList4 from "../assets/ImageList4.jpg";
+import ImageList5 from "../assets/ImageList5.jpg";
+import ImageList6 from "../assets/ImageList6.jpg";
+import ImageList7 from "../assets/ImageList7.jpg";
+import ImageList8 from "../assets/ImageList8.jpg";
 
 export const TopImageList = [
   {

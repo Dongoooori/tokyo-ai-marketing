@@ -1,7 +1,7 @@
 import InstagramIcon from "../../assets/Instagram.jpg";
-import TwitterIcon from "../../assets/Twitter.png";
-import YoutubeIcon from "../../assets/Youtube.png";
-import XIcon from "../../assets/X.png";
+import TwitterIcon from "../../assets/Twitter.jpg";
+import YoutubeIcon from "../../assets/Youtube.jpg";
+import XIcon from "../../assets/X.jpg";
 import GoogleIcon from "../../assets/Google.jpg";
 
 const Footer = () => {

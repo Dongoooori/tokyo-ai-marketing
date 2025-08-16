@@ -1,8 +1,7 @@
-import FacebookIcon from "../../assets/Facebook.jpg";
 import InstagramIcon from "../../assets/Instagram.jpg";
-import TwitterIcon from "../../assets/Twitter.jpg";
-import YoutubeIcon from "../../assets/Youtube.jpg";
-import XIcon from "../../assets/X.jpg";
+import TwitterIcon from "../../assets/Twitter.png";
+import YoutubeIcon from "../../assets/Youtube.png";
+import XIcon from "../../assets/X.png";
 import GoogleIcon from "../../assets/Google.jpg";
 
 const Footer = () => {
@@ -109,7 +108,6 @@ const Footer = () => {
           </ul>
         </div>
         <div className='flex gap-4'>
-          <img src={FacebookIcon} alt='facebook' className='size-6 rounded-full'/>
           <img src={InstagramIcon} alt='instagram' className='size-6 rounded-full'/>
           <img src={TwitterIcon} alt='twitter' className='size-6 rounded-full'/>
           <img src={YoutubeIcon} alt='youtube' className='size-6 rounded-full'/>

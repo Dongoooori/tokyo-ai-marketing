@@ -46,9 +46,9 @@ const App: React.FC = () => {
         </section>
 
         {/** Video Section */}
-        <section className='mx-auto py-20 px-4 md:px-10 space-y-10'>
+        <section className='mx-auto px-4 md:px-10 space-y-2 md:pt-10 md:space-y-10'>
           <p className='font-serif font-bold text-lg sm:text-4xl sm:text-center'>Innovation You Can See</p>
-          <div id='video' className='w-full flex flex-col md:grid md:grid-flow-col md:grid-rows-3 gap-10 pt-20'>
+          <div id='video' className='w-full flex flex-col md:grid md:grid-flow-col md:grid-rows-3 gap-4 pt-2'>
             <VideoCard />
           </div>
         </section>

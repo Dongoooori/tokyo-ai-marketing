@@ -7,34 +7,60 @@ const VideoCard = () => {
 
   // 마우스 올리면 비디오 재생
   const handleMouseEnter = (index: number) => {
-    videoRefs.current[index].play();
+    if (videoRefs.current[index]) {
+      videoRefs.current[index].play().catch(e => console.log('Video play failed:', e));
+    }
   };
 
   // 마우스 떼면 비디오 정지
   const handleMouseLeave = (index: number) => {
-    videoRefs.current[index].pause();
-    videoRefs.current[index].currentTime = 0;
+    if (videoRefs.current[index]) {
+      videoRefs.current[index].pause();
+      videoRefs.current[index].currentTime = 0;
+    }
+  };
+
+  // 터치 이벤트 처리 (모바일용)
+  const handleTouchStart = (index: number) => {
+    if (videoRefs.current[index]) {
+      videoRefs.current[index].play().catch(e => console.log('Video play failed:', e));
+    }
+  };
+
+  const handleTouchEnd = (index: number) => {
+    if (videoRefs.current[index]) {
+      videoRefs.current[index].pause();
+      videoRefs.current[index].currentTime = 0;
+    }
   };
 
   return (
     <>
       {videoList.map((item, index) => (
-        <video
+        <div 
           key={index}
-          ref={(el) => {
-            if(el) {
-              videoRefs.current[index] = el;
-            }
-          }}
-          style={{ width: "100%", height: "100%", cursor: "pointer" }}
-          muted
-          loop
-          playsInline
-          onMouseEnter={() => handleMouseEnter(index)}
-          onMouseLeave={() => handleMouseLeave(index)}
+          className="w-full h-full aspect-video rounded-lg overflow-hidden"
         >
-          <source src={item.src} type="video/mp4" />
-        </video>
+          <video
+            ref={(el) => {
+              if(el) {
+                videoRefs.current[index] = el;
+              }
+            }}
+            className="w-full h-full object-cover"
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            onMouseEnter={() => handleMouseEnter(index)}
+            onMouseLeave={() => handleMouseLeave(index)}
+            onTouchStart={() => handleTouchStart(index)}
+            onTouchEnd={() => handleTouchEnd(index)}
+          >
+            <source src={item.src} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
       ))}
     </>
   );

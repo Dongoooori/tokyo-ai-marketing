@@ -52,6 +52,7 @@ const VideoCard = () => {
             loop
             playsInline
             preload="metadata"
+            poster={item.poster}
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={() => handleMouseLeave(index)}
             onTouchStart={() => handleTouchStart(index)}
